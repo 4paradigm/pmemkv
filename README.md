@@ -44,7 +44,7 @@ Run Tests
 
 Modify `tests/engines/pskiplist/default.cmake` to specify your own pmem mounted path (default: /mnt/pmem0), then run:
 ```sh
-ctest --output-on-failure -R pskiplist__put_get_remove__default
+ctest --output-on-failure -R pskiplist
 ```
 
 More testcases will be added.
