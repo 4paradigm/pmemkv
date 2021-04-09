@@ -2,11 +2,18 @@
 
 `PmemStore` is a forked project from Intel's [pmemkv](https://github.com/pmem/pmemkv) which is a local/embedded key-value datastore optimized for persistent memory. 
 In addition to the origin pmemkv, `PmemStore` adds one more storage engine called `PSKIPLIST` to make it more suitable for supporting feature engineering/extraction workloads in AI applications. The persistent skiplist is firstly introduced in our [VLDB'21 paper](http://vldb.org/pvldb/vol14/p799-chen.pdf) **("Optimizing In-memory Database Engine for AI-powered On-line Decision Augmentation Using Persistent Memory". Cheng Chen, Jun Yang, Mian Lu, Taize Wang, Zhao Zheng, Yuqiang Chen, Wenyuan Dai, Bingsheng He, Weng-Fai Wong, Guoan Wu, Yuping Zhao, Andy Rudoff)**. Please checkout the paper for more details.
+
 Using `PmemStore` is similar to using pmemkv (See [pmemkv README](README-pmemkv.md) for more information.)
 
 ## Table of contents
-1. [Building from Sources](#building-from-Sources)
-5. [Contact us](#contact-us)
+1. [Submodule dependency](#submodule-dependency)
+2. [Building from Sources](#building-from-Sources)
+3. [Contact us](#contact-us)
+
+## Submodule dependency
+### pskiplist
+
+[pskiplist](https://github.com/4paradigm/pskiplist) is a submodule in PmemStore. It is a persistent and concurrent storage engine, backed by a skiplist implemented using Persistent Compare and Swap (PCAS). We maintain it in a separated repo because such low-level data structure implementation can be reused and integrated with other systems. Please checkout the [repo](https://github.com/4paradigm/pskiplist) for more information.
 
 ## Building from Sources
 
