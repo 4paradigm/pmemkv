@@ -8,7 +8,8 @@ Using `PmemStore` is similar to using pmemkv (See [pmemkv README](README-pmemkv.
 ## Table of contents
 1. [Submodule dependency](#submodule-dependency)
 2. [Building from Sources](#building-from-Sources)
-3. [Contact us](#contact-us)
+3. [Community](#community)
+<!-- 3. [Contact us](#contact-us) -->
 
 ## Submodule dependency
 ### pskiplist
@@ -56,7 +57,16 @@ ctest --output-on-failure -R pskiplist
 
 More testcases will be added.
 
-## Contact us
-For more information about **pmemstore**, contact Jun Yang (yangjun01@4paradigm.com),
-Mian Lu (lumian@4paradigm) or post on our **#pskiplist** Slack channel using
-[this invite link](https://join.slack.com/share/zt-oxsgomwg-hKELngKqCfyO3oLcoV2XDw).
+## Community
+
+PmemStore is developed by MemArk (https://memark.io/), which is a technical community focusing on empowering modern memory architecture evolution and its application optimization. MemArk is led by 4Paradigm (https://www.4paradigm.com/) and other sponsors (such as Intel).
+
+- Chatting: For any feedback, suggestions, issues, and anythings about using PmemStore, you can join our interactive discussion channel at Slack [#pskiplist](https://join.slack.com/t/memarkworkspace/shared_invite/zt-o1wa5wqt-euKxFgyrUUrQCqJ4rE0oPw)
+- Development dicussion: If you would like to report a bug, please use the GitHub Issues; if you would like to propose a new feature, or would like to start a pull request, please use the GitHub Discussions, and our developers will respond promptly.
+- Forum (Chinese): https://discuss.memark.io/
+
+You can also contact the authors directly for any feedback:
+- YANG Jun: yangjun@4paradigm.com
+- LU Mian: lumian@4paradigm.com
+- ZHANG Hao: zhanghao@4paradigm.com
+- CHEN Cheng: chencheng@4apradigm.com
