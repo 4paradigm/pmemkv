@@ -1,15 +1,15 @@
 #!/bin/bash
 if [ -z $1 ]
 then
-	nt=30
+        nt=20
 else
-	nt=$1
+        nt=$1
 fi
 if [ -z $2 ]
 then
-	lc=2000000
+        lc=1000000
 else
-	lc=$2
+        lc=$2
 fi
 
 pushd benchmark/pmem-test
@@ -17,5 +17,5 @@ pushd benchmark/pmem-test
 echo "Create DRAM table : Done"
 echo "Start to insert records to DRAM table with ${nt} threads with ${lc} keys each ..."
 sleep 60
-../apache-jmeter-5.1.1/bin/jmeter -n -t get/pmtest-load-data-2-mem.jmx -Jthreads=${nt} -Jloop_count=${lc} -Jrecords=10
+../apache-jmeter-5.1.1/bin/jmeter -n -t get/pmtest-load-data-2-mem.jmx -Jthreads=${nt} -Jloop_count=${lc} -Jrecords=1
 popd
