@@ -12,7 +12,8 @@ else
         nk=$2
 fi
 
-pushd benchmark/pmem-test
-echo "Start to test GET performance of DRAM table with ${nt} threads ..."
+pushd benchmark/pmem-test > /dev/null 2>&1
+echo "[INFO] Start to test GET performance of DRAM table with ${nt} threads ..."
 ../apache-ant-1.9.6/bin/ant -Dthreads=${nt} -Dduration=120 -Dkey.count=${nk} -Dtest.script=get/pmtest-2-get-mem.jmx
-popd
+popd > /dev/null 2>&1
+echo "[INFO] Done"

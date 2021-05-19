@@ -1,6 +1,6 @@
 if [ $# -lt 1 ]
 then
-	pmempath=/data
+	pmempath=/pmem
 else
 	pmempath=$1
 fi
@@ -12,5 +12,4 @@ sed -i "s/<ip_addr>/$(hostname -i)/g"	rtidb/conf/tablet.flags \
 					connect_rtidb.sh
 sed -i "s/<ncores>/$(nproc)/g"		rtidb/conf/tablet.flags
 sed -i "s#<pmem_path>#${pmempath}#g"	rtidb/conf/tablet.flags clear_rtidb.sh
-
-
+echo "Done"
