@@ -7,7 +7,7 @@ else
 fi
 if [ -z $2 ]
 then
-        lc=1000000
+        lc=200000
 else
         lc=$2
 fi
